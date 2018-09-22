@@ -1,0 +1,14 @@
+'Behavior Name', 'Status', 'Time Stamp', 'Milliseconds', 'Latency', 'Milliseconds', 'File Name', 'Modifier'
+
+ ** S T A R T ** , Occurred , 29364 , 796 , 0 , 000 , WT - Exercise 1-8 ,  
+ Struggling , Started , 29365 , 078 , 0 , 282 , WT - Exercise 1-8 ,  
+ Struggling , Ended , 29397 , 343 , 32 , 547 , WT - Exercise 1-8 ,  
+ Immobility , Started , 29397 , 343 , 32 , 547 , WT - Exercise 1-8 ,  
+ Immobility , Ended , 29399 , 812 , 35 , 016 , WT - Exercise 1-8 ,  
+ Struggling , Started , 29399 , 812 , 35 , 016 , WT - Exercise 1-8 ,  
+ Struggling , Ended , 29414 , 968 , 50 , 172 , WT - Exercise 1-8 ,  
+ Immobility , Started , 29414 , 968 , 50 , 172 , WT - Exercise 1-8 ,  
+ Immobility , Ended , 29417 , 875 , 53 , 079 , WT - Exercise 1-8 ,  
+ Struggling , Started , 29417 , 875 , 53 , 079 , WT - Exercise 1-8 ,  
+ Struggling , Ended , 29431 , 687 , 66 , 891 , WT - Exercise 1-8 ,  
+ ** S T O P ** , Occured , 29431 , 687 , 66 , 891 , WT - Exercise 1-8 , 
