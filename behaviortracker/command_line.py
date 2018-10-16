@@ -14,14 +14,11 @@ def main():
     parser.add_argument('-o', '--output', default='bt')
     parser.add_argument('-g', '--graph', nargs='+')
     parser.add_argument('-p', '--period', default=60, type=int)
-    parser.add_argument('-w', '--windowedfile', action='store_true')
     parser.add_argument('-s', '--subjectfile', action='store_true')
     parser.add_argument('-a', '--averagedfile', action='store_true')
     parser.add_argument('-f', '--factor', action='append', nargs='+')
 
     options = parser.parse_args()
-
-    print(options)
 
     if options.source == None:
         options.source = ['.']
@@ -49,23 +46,13 @@ def main():
     for path in sourceFiles:
         experiment.add_file(path)
     
-    events = experiment.events_df()
-
-    windowed_events = behaviortracker.window(events, options.period)
-
-    if options.windowedfile:
-        windowFileName = options.output + '_windowed.csv'
-        windowed_events.to_csv(windowFileName)
-    
     if options.subjectfile:
         subjectFileName = options.output + '_by_subject.csv'
-        bySubject = group_data_by_mouse(events)
-        #byMouse.to_csv(mouseFileName)
+        experiment.windowed_summed_by_subject(options.period).to_csv(subjectFileName)
     
     if options.averagedfile:
         averagedFileName = options.output + '_averaged.csv'
-        #averaged = group_and_average_data(events)
-        #averaged.to_csv(averagedFileName)
+        experiment.windowed_averaged_by_factor(options.period).to_csv(averagedFileName)
     
     if options.graph != None:
         for behavior in options.graph:
